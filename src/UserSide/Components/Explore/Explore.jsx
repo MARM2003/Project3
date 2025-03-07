@@ -1,252 +1,354 @@
-// import React from "react";
-// import { Container, Row, Col, Card, Button } from "react-bootstrap";
-// import mech from "../images/sectors/mechanical.svg";
-// import { MdOutlineArrowOutward } from "react-icons/md";
-// import "bootstrap/dist/css/bootstrap.min.css";
-
-// const Explore = () => {
-//   const categories = [
-//     "Mechanical",
-//     "Piping",
-//     "Electrical",
-//     "Instrumentation",
-//     "Metal",
-//     "Structural",
-//   ];
-
-//   return (
-//     <Container fluid className="d-flex py-5">
-//       <div className="bg-light border rounded-4 p-4 w-100 w-md-75 w-lg-50 shadow-lg">
-//         <div className="d-flex justify-content-between align-items-center mb-4">
-//           <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-0">Explore Vendors from Leading Sectors</p>
-//           <p className="fw-bold fs-6 fs-md-5 fs-lg-4 text-primary mb-0" style={{ cursor: "pointer" }}>
-//             Show all sectors
-//           </p>
-//         </div>
-
-//         {/* Grid View for Large Screens */}
-//         <div className="d-none d-md-block">
-//           <Row className="g-3">
-//             {categories.map((category, index) => (
-//               <Col key={index} xs={6} sm={4} md={4} lg={2}>
-//                 <Card className="border border-dark bg-white rounded text-center shadow p-3" style={{ height: "180px" }}>
-//                   <Card.Img
-//                     variant="top"
-//                     src={mech}
-//                     alt={category}
-//                     className="img-fluid"
-//                     style={{ maxHeight: "80px", objectFit: "contain" }}
-//                   />
-//                   <Card.Body className="d-flex flex-column align-items-center">
-//                     <Card.Title className="fs-6 fw-semibold text-wrap text-center" style={{ maxWidth: "100px" }}>
-//                       {category}
-//                     </Card.Title>
-//                   </Card.Body>
-//                 </Card>
-//               </Col>
-//             ))}
-//           </Row>
-//         </div>
-
-//         {/* Scrollable View for Small Screens */}
-//         <div className="d-md-none overflow-auto" style={{ maxWidth: "100%", scrollbarWidth: "thin", scrollbarColor: "#ccc transparent" }}>
-//           <div className="d-flex gap-3 flex-nowrap">
-//             {categories.map((category, index) => (
-//               <div
-//                 key={index}
-//                 className="border border-dark bg-white rounded text-center shadow p-3"
-//                 style={{ minWidth: "120px", height: "180px" }}
-//               >
-//                 <img
-//                   src={mech}
-//                   alt={category}
-//                   className="img-fluid"
-//                   style={{ maxHeight: "80px", objectFit: "contain" }}
-//                 />
-//                 <div className="fw-semibold fs-6 text-wrap text-wrap" style={{ maxWidth: "100px" }}>
-//                   {category}
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-
-// {/* 
-//         <div className="w-100 d-flex justify-content-between mt-5 ">
-//           <div className="bg-warning border pt-5 ps-3 pe-3 rounded-4 me-2 pb-5">
-//             <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-0">For Vendors</p>
-//             <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-0 mb-5">Start Selling</p>
-//             <p style={{ textAlign: "justify" }}>At Enggpro, you have the power to increase your business exponentially by taking part in the online engineering supply-chain and brand and advertise your company, products and services to a large number of targeted buyers globally.</p>
-
-//             <section className="d-flex justify-content-between">
-
-//               <p><Button className="btn btn-primary ps-3 pe-3 pt-2 pb-2">Get Started <MdOutlineArrowOutward /></Button></p>
-//               <img src={mech} alt="" style={{ maxHeight: "80px", objectFit: "contain" }} />
-//               <p></p>
-//             </section>
-//           </div>
-//           <div className=" border pt-5 ps-3 pe-3 rounded-4 ms-2" style={{ backgroundColor: "#ff5733", color: "white", }}>
-
-//             <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-0">For Buyers!</p>
-//             <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-0 mb-5">Start Buying</p>
-//             <p style={{ textAlign: "justify" }}>With Enggpro.com, you can find the most trusted suppliers of Electrical, Mechanical, Thermal, Marine, Oil & Gas exploration and production, Piping, Instrumentation, Metal, Structural, Safety Equipment Sectors and EPC Service Providers.</p>
-
-//             <section className="d-flex justify-content-between">
-
-//               <p><Button className="btn btn-primary ps-3 pe-3 pt-2 pb-2">Get Started <MdOutlineArrowOutward /></Button></p>
-//               <img src={mech} alt="" style={{ maxHeight: "80px", objectFit: "contain" }} />
-//               <p></p>
-//             </section>
-//           </div>
-//         </div> */}
-
-// <div className="mt-5">
-//       <Row className="g-4"> 
-        
-//         <Col xs={12} md={6}>
-//           <div className="bg-warning border p-4 rounded-4 h-100">
-//             <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-0">For Vendors!</p>
-//             <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-4">Start Selling</p>
-//             <p className="text-justify">
-//               At Enggpro, you have the power to increase your business exponentially by taking part in the online engineering supply chain and brand and advertise your company, products, and services to a large number of targeted buyers globally.
-//             </p>
-
-//             <div className="d-flex justify-content-between align-items-center mt-4">
-//               <Button className="btn btn-primary px-4 py-2">
-//                 Get Started <sup> <MdOutlineArrowOutward /></sup>
-//               </Button>
-//               <img src={mech} alt="Vendor" style={{ maxHeight: "80px", objectFit: "contain" }} />
-//             </div>
-//           </div>
-//         </Col>
-
-        
-//         <Col xs={12} md={6}>
-//           <div className="border p-4 rounded-4 h-100" style={{ backgroundColor: "#ff5733", color: "white" }}>
-//             <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-0">For Buyers!</p>
-//             <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-4">Start Buying</p>
-//             <p className="text-justify">
-//               With Enggpro.com, you can find the most trusted suppliers of Electrical, Mechanical, Thermal, Marine, Oil & Gas exploration and production, Piping, Instrumentation, Metal, Structural, Safety Equipment Sectors, and EPC Service Providers.
-//             </p>
-
-//             <div className="d-flex justify-content-between align-items-center mt-4">
-//               <Button className="btn btn-primary px-4 py-2">
-//                 Create RFQ <sup> <MdOutlineArrowOutward /></sup>
-//               </Button>
-//               <img src={mech} alt="Buyer" style={{ maxHeight: "80px", objectFit: "contain" }} />
-//             </div>
-//           </div>
-//         </Col>
-//       </Row>
-//     </div>
-//       </div>
-
-
-
-//     </Container>
-//   );
-// };
-
-// export default Explore;
-
-
 import React from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import "bootstrap/dist/css/bootstrap.min.css";
-import mech from "../images/sectors/mechanical.svg";
-
+import mechanical from "../images/sectors/mechanical.svg";
+import piping from "../images/sectors/piping.svg"
+import electrical from "../images/sectors/electrical.svg"
+import instrumentation from "../images/sectors/instrumentation.svg"
+import metal from "../images/sectors/metal.svg"
+import structural from "../images/sectors/structural.svg"
 const Explore = () => {
-  const categories = [
-    "Mechanical",
-    "Piping",
-    "Electrical",
-    "Instrumentation",
-    "Metal",
-    "Structural",
-  ];
-
-  return (
-    <div className="container-fluid d-flex py-5">
-      <div className="bg-light border rounded-4 p-4 w-100 w-md-75 w-lg-50 shadow-lg">
-        
-        {/* Header Section */}
-        <div className="d-flex justify-content-between align-items-center mb-4">
-          <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-0">Explore Vendors from Leading Sectors</p>
-          <p className="fw-bold fs-6 fs-md-5 fs-lg-4 text-primary mb-0" style={{ cursor: "pointer" }}>
-            Show all sectors
-          </p>
-        </div>
-
-        {/* Grid View for Large Screens */}
-        <div className="d-none d-md-block">
-          <div className="row g-3">
-            {categories.map((category, index) => (
-              <div key={index} className="col-6 col-sm-4 col-md-4 col-lg-2">
-                <div className="border border-dark bg-white rounded text-center shadow p-3" style={{ height: "180px" }}>
-                  <img src={mech} alt={category} className="img-fluid" style={{ maxHeight: "80px", objectFit: "contain" }} />
-                  <p className="fs-6 fw-semibold text-wrap text-center m-0" style={{ maxWidth: "100px" }}>{category}</p>
+ return(
+  <>
+     {/* <!-- brand section --> */}
+        <section className="boxcar-brand-section section-radius-top bg-1">
+            <div className="boxcar-container">
+                <div className="boxcar-title">
+                    <h2 className="wow fadeInUp">Explore Vendors from Leading Sectors</h2>
+                    <a href="#" className="btn-title">Show All Sectors<svg xmlns="http://www.w3.org/2000/svg" width="14"
+                            height="14" viewbox="0 0 14 14" fill="none">
+                            <g clip-path="url(#clip0_601_3199)">
+                                <path
+                                    d="M13.6109 0H5.05533C4.84037 0 4.66643 0.173943 4.66643 0.388901C4.66643 0.603859 4.84037 0.777802 5.05533 0.777802H12.6721L0.113697 13.3362C-0.0382246 13.4881 -0.0382246 13.7342 0.113697 13.8861C0.18964 13.962 0.289171 14 0.388666 14C0.488161 14 0.587656 13.962 0.663635 13.8861L13.222 1.3277V8.94447C13.222 9.15943 13.3959 9.33337 13.6109 9.33337C13.8259 9.33337 13.9998 9.15943 13.9998 8.94447V0.388901C13.9998 0.173943 13.8258 0 13.6109 0Z"
+                                    fill="#050B20"></path>
+                            </g>
+                            <defs>
+                                <clippath id="clip0_601_3199">
+                                    <rect width="14" height="14" fill="white"></rect>
+                                </clippath>
+                            </defs>
+                        </svg></a>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Scrollable View for Small Screens */}
-        <div className="d-md-none overflow-auto" style={{ maxWidth: "100%", scrollbarWidth: "thin", scrollbarColor: "#ccc transparent" }}>
-          <div className="d-flex gap-3 flex-nowrap">
-            {categories.map((category, index) => (
-              <div key={index} className="border border-dark bg-white rounded text-center shadow p-3" style={{ minWidth: "120px", height: "180px" }}>
-                <img src={mech} alt={category} className="img-fluid" style={{ maxHeight: "80px", objectFit: "contain" }} />
-                <p className="fs-6 fw-semibold text-wrap text-center m-0" style={{ maxWidth: "100px" }}>{category}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Vendor & Buyer Sections */}
-        <div className="mt-5">
-          <div className="row g-4">
-            
-            {/* Vendor Section */}
-            <div className="col-12 col-md-6">
-              <div className="bg-warning border p-4 rounded-4 h-100">
-                <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-0">For Vendors!</p>
-                <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-4">Start Selling</p>
-                <p className="text-justify">
-                  At Enggpro, you have the power to increase your business exponentially by taking part in the online engineering supply chain and brand and advertise your company, products, and services to a large number of targeted buyers globally.
-                </p>
-                <div className="d-flex justify-content-between align-items-center mt-4">
-                  <button className="btn btn-primary px-4 py-2">
-                    Get Started <MdOutlineArrowOutward />
-                  </button>
-                  <img src={mech} alt="Vendor" style={{ maxHeight: "80px", objectFit: "contain" }} />
+                <div className="row">
+                    {/* <!-- cars-block --> */}
+                    <div className="cars-block style-1 col-lg-2 col-md-6 col-sm-6">
+                        <div className="inner-box wow fadeInUp">
+                            <div className="image-box">
+                                <a href="#"><img src={mechanical} alt="" width="80"/></a>
+                            </div>
+                            <div className="content-box">
+                                <h6 className="title"><a href="#">Mechanical</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <!-- cars-block --> */}
+                    <div className="cars-block style-1 col-lg-2 col-md-6 col-sm-6">
+                        <div className="inner-box wow fadeInUp" data-wow-delay="100ms">
+                            <div className="image-box">
+                                <a href="#"><img src={piping} alt="" width="80"/></a>
+                            </div>
+                            <div className="content-box">
+                                <h6 className="title"><a href="#">Piping</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <!-- cars-block --> */}
+                    <div className="cars-block style-1 col-lg-2 col-md-6 col-sm-6">
+                        <div className="inner-box wow fadeInUp" data-wow-delay="200ms">
+                            <div className="image-box">
+                                <a href="#"><img src={electrical} alt="" width="80"/></a>
+                            </div>
+                            <div className="content-box">
+                                <h6 className="title"><a href="#">Electrical</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <!-- cars-block --> */}
+                    <div className="cars-block style-1 col-lg-2 col-md-6 col-sm-6">
+                        <div className="inner-box wow fadeInUp" data-wow-delay="300ms">
+                            <div className="image-box">
+                                <a href="#"><img src={instrumentation} alt="" width="80"/></a>
+                            </div>
+                            <div className="content-box">
+                                <h6 className="title"><a href="#">Instrumentation</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <!-- cars-block --> */}
+                    <div className="cars-block style-1 col-lg-2 col-md-6 col-sm-6">
+                        <div className="inner-box wow fadeInUp" data-wow-delay="400ms">
+                            <div className="image-box">
+                                <a href="#"><img src={metal} alt="" width="80"/></a>
+                            </div>
+                            <div className="content-box">
+                                <h6 className="title"><a href="#">Metal</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <!-- cars-block --> */}
+                    <div className="cars-block style-1 col-lg-2 col-md-6 col-sm-6">
+                        <div className="inner-box wow fadeInUp" data-wow-delay="500ms">
+                            <div className="image-box">
+                                <a href="#"><img src={structural} alt="" width="80"/></a>
+                            </div>
+                            <div className="content-box">
+                                <h6 className="title"><a href="#">Structural</a></h6>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-
-            {/* Buyer Section */}
-            <div className="col-12 col-md-6">
-              <div className="border p-4 rounded-4 h-100" style={{ backgroundColor: "#ff5733", color: "white" }}>
-                <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-0">For Buyers!</p>
-                <p className="fw-bold fs-5 fs-md-4 fs-lg-3 mb-4">Start Buying</p>
-                <p className="text-justify">
-                  With Enggpro.com, you can find the most trusted suppliers of Electrical, Mechanical, Thermal, Marine, Oil & Gas exploration and production, Piping, Instrumentation, Metal, Structural, Safety Equipment Sectors, and EPC Service Providers.
-                </p>
-                <div className="d-flex justify-content-between align-items-center mt-4">
-                  <button className="btn btn-primary px-4 py-2">
-                    Create RFQ <MdOutlineArrowOutward />
-                  </button>
-                  <img src={mech} alt="Buyer" style={{ maxHeight: "80px", objectFit: "contain" }} />
+        </section>
+        {/* <!-- End brand section --> */}
+            {/* <!-- blog-section-two --> */}
+            <section className="blog-section-two pt-0 section-radius-bottom bg-white">
+            <div className="boxcar-container">
+                <div className="row">
+                    {/* <!-- blog-blockt-two --> */}
+                    <div className="blog-blockt-two col-lg-6 col-md-6 col-sm-12">
+                        <div className="inner-box wow fadeInUp">
+                            <h3 className="title">For Vendors! <br/>Start Selling</h3>
+                            <div className="text">At Enggpro, you have the power to increase your business exponentially by
+                                taking part in the online engineering
+                                supply-chain and brand and advertise your company, products and services to a large
+                                number of targeted buyers globally.
+                            </div>
+                            <a href="#" className="read-more">Get Started
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_601_692)">
+                                        <path
+                                            d="M13.6109 0H5.05533C4.84037 0 4.66643 0.173943 4.66643 0.388901C4.66643 0.603859 4.84037 0.777802 5.05533 0.777802H12.6721L0.113697 13.3362C-0.0382246 13.4881 -0.0382246 13.7342 0.113697 13.8861C0.18964 13.962 0.289171 14 0.388666 14C0.488161 14 0.587656 13.962 0.663635 13.8861L13.222 1.3277V8.94447C13.222 9.15943 13.3959 9.33337 13.6109 9.33337C13.8259 9.33337 13.9998 9.15943 13.9998 8.94447V0.388901C13.9998 0.173943 13.8258 0 13.6109 0Z"
+                                            fill="white"></path>
+                                    </g>
+                                    <defs>
+                                        <clippath id="clip0_601_692">
+                                            <rect width="14" height="14" fill="white"></rect>
+                                        </clippath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <div className="hover-img">
+                                <svg height="110" viewBox="1 -4 511.999 511" width="110"
+                                    xmlns="http://www.w3.org/2000/svg" id="fi_1839343">
+                                    <path
+                                        d="m333.761719 249.898438-80.328125-15.621094v-52.265625h-74.363282v52.265625l-80.328124 15.621094c-30.332032 8.929687-51.160157 24.773437-51.160157 56.394531v113.082031c0 11.363281 9.214844 20.578125 20.582031 20.578125h296.175782c11.367187 0 20.582031-9.210937 20.582031-20.578125v-113.082031c0-31.621094-20.828125-47.464844-51.160156-56.394531zm0 0"
+                                        fill="#fff3de"></path>
+                                    <path
+                                        d="m333.761719 249.898438-80.328125-15.621094c0 20.53125-16.648438 37.179687-37.179688 37.179687-20.535156 0-37.183594-16.644531-37.183594-37.179687l-80.328124 15.621094c-30.332032 8.929687-51.160157 24.773437-51.160157 56.394531v22.324219h55.558594v111.335937h226.21875v-111.335937h55.558594v-22.324219c.003906-31.621094-20.824219-47.464844-51.15625-56.394531zm0 0"
+                                        fill="#ff9838"></path>
+                                    <path
+                                        d="m253.433594 234.277344v-52.265625h-30.332032v88.804687c17.261719-3.214844 30.332032-18.347656 30.332032-36.539062zm0 0"
+                                        fill="#ffe5c2"></path>
+                                    <path
+                                        d="m333.761719 249.898438-1.128907-.222657c13.496094 9.601563 21.621094 23.199219 21.621094 42.949219v35.992188h30.667969v-22.324219c0-31.621094-20.828125-47.464844-51.160156-56.394531zm0 0"
+                                        fill="#ff8709"></path>
+                                    <path
+                                        d="m103.144531 249.039062v190.914063h226.21875v-190.914063l-36.390625-7.074218v48.53125c0 8.25-6.691406 14.941406-14.941406 14.941406h-123.554688c-8.253906 0-14.941406-6.691406-14.941406-14.941406v-48.53125zm0 0"
+                                        fill="#2dd2e3"></path>
+                                    <path
+                                        d="m290.195312 114.371094h-4.71875v-18.789063c0-18.703125-7.679687-36.832031-21.855468-49.035156-11.113282-9.570313-26.734375-17.921875-47.367188-18.152344-20.636718.230469-36.257812 8.582031-47.371094 18.152344-14.175781 12.203125-21.855468 30.328125-21.855468 49.035156v18.789063h-4.71875c-6.917969 0-12.527344 5.609375-12.527344 12.53125v13.882812c0 6.917969 5.609375 12.527344 12.527344 12.527344h4.738281c.390625 18.183594 8.03125 35.683594 21.835937 47.570312 11.113282 9.570313 26.734376 17.921876 47.367188 18.152344 20.636719-.230468 36.257812-8.582031 47.371094-18.152344 13.804687-11.886718 21.445312-29.386718 21.832031-47.570312h4.738281c6.921875 0 12.53125-5.609375 12.53125-12.527344v-13.882812c0-6.921875-5.609375-12.53125-12.527344-12.53125zm0 0"
+                                        fill="#fff3de"></path>
+                                    <path
+                                        d="m290.195312 114.371094h-4.71875v-18.789063c0-18.703125-7.679687-36.832031-21.855468-49.035156-2.628906-2.261719-5.515625-4.453125-8.652344-6.488281l-.011719 121.917968c-.390625 18.183594-8.03125 35.6875-21.835937 47.570313-3.921875 3.378906-8.417969 6.59375-13.484375 9.363281 18.964843-1.046875 33.488281-8.992187 43.984375-18.027344 13.804687-11.886718 21.445312-29.386718 21.835937-47.570312h4.738281c6.917969 0 12.527344-5.609375 12.527344-12.53125v-13.878906c0-6.921875-5.609375-12.53125-12.527344-12.53125zm0 0"
+                                        fill="#ffe5c2"></path>
+                                    <path
+                                        d="m219.839844 7.996094h-7.175782c-43.601562 0-78.945312 35.347656-78.945312 78.945312v22.730469h165.066406v-22.730469c0-43.597656-35.34375-78.945312-78.945312-78.945312zm0 0"
+                                        fill="#ff9838"></path>
+                                    <path
+                                        d="m219.839844 7.996094h-7.175782c-3.878906 0-7.683593.292968-11.410156.832031 38.1875 5.535156 67.53125 38.390625 67.53125 78.113281v22.730469h30v-22.730469c0-43.597656-35.34375-78.945312-78.945312-78.945312zm0 0"
+                                        fill="#ff8709"></path>
+                                    <path
+                                        d="m302.171875 121.835938h-171.839844c-6.371093 0-11.539062-5.164063-11.539062-11.539063s5.167969-11.542969 11.539062-11.542969h171.839844c6.375 0 11.539063 5.167969 11.539063 11.542969.003906 6.375-5.164063 11.539063-11.539063 11.539063zm0 0"
+                                        fill="#ff8709"></path>
+                                    <path
+                                        d="m464.414062 412.257812h-181v-77.601562c0-3.335938 2.707032-6.039062 6.042969-6.039062h168.917969c3.335938 0 6.039062 2.703124 6.039062 6.039062zm0 0"
+                                        fill="#eab765"></path>
+                                    <path
+                                        d="m458.375 328.617188h-30.25c3.335938 0 6.039062 2.703124 6.039062 6.039062v77.601562h30.25v-77.601562c0-3.335938-2.703124-6.039062-6.039062-6.039062zm0 0"
+                                        fill="#d9ab5e"></path>
+                                    <path
+                                        d="m455.351562 496.863281h-398.703124c-27.144532 0-49.148438-22.003906-49.148438-49.148437 0-27.144532 22.003906-49.148438 49.148438-49.148438h398.703124c27.144532 0 49.148438 22.003906 49.148438 49.148438 0 27.144531-22.003906 49.148437-49.148438 49.148437zm0 0"
+                                        fill="#8ebac5"></path>
+                                    <path
+                                        d="m455.351562 398.566406h-30c27.144532 0 49.148438 22.003906 49.148438 49.148438 0 27.144531-22.003906 49.148437-49.148438 49.148437h30c27.144532 0 49.148438-22.003906 49.148438-49.148437 0-27.144532-22.003906-49.148438-49.148438-49.148438zm0 0"
+                                        fill="#7ca1b1"></path>
+                                    <path
+                                        d="m56.648438 468.828125c-11.640626 0-21.113282-9.472656-21.113282-21.113281s9.472656-21.109375 21.113282-21.109375h398.703124c11.640626 0 21.113282 9.46875 21.113282 21.109375s-9.472656 21.113281-21.113282 21.113281zm0 0"
+                                        fill="#384949"></path>
+                                    <g fill="#deecf1">
+                                        <path
+                                            d="m476.464844 447.714844c0 11.660156-9.453125 21.113281-21.113282 21.113281-11.660156 0-21.109374-9.453125-21.109374-21.113281s9.449218-21.109375 21.109374-21.109375c11.660157 0 21.113282 9.449219 21.113282 21.109375zm0 0">
+                                        </path>
+                                        <path
+                                            d="m77.757812 447.714844c0 11.660156-9.449218 21.113281-21.109374 21.113281-11.660157 0-21.113282-9.453125-21.113282-21.113281s9.453125-21.109375 21.113282-21.109375c11.660156 0 21.109374 9.449219 21.109374 21.109375zm0 0">
+                                        </path>
+                                        <path
+                                            d="m203.355469 447.714844c0 11.660156-9.453125 21.113281-21.109375 21.113281-11.660156 0-21.113282-9.453125-21.113282-21.113281s9.453126-21.109375 21.113282-21.109375c11.65625 0 21.109375 9.449219 21.109375 21.109375zm0 0">
+                                        </path>
+                                        <path
+                                            d="m350.867188 447.714844c0 11.660156-9.453126 21.113281-21.113282 21.113281-11.65625 0-21.109375-9.453125-21.109375-21.113281s9.453125-21.109375 21.109375-21.109375c11.660156 0 21.113282 9.449219 21.113282 21.109375zm0 0">
+                                        </path>
+                                    </g>
+                                    <path
+                                        d="m471.914062 393.539062v-14.359374c0-4.140626-3.355468-7.5-7.5-7.5-4.140624 0-7.5 3.359374-7.5 7.5v11.910156c-.519531-.015625-1.039062-.023438-1.5625-.023438h-164.4375v-54.949218h166v12.894531c0 4.140625 3.359376 7.5 7.5 7.5 4.144532 0 7.5-3.359375 7.5-7.5v-14.355469c0-7.464844-6.070312-13.539062-13.539062-13.539062h-65.953125v-14.824219c0-31.589844-18.496094-52.390625-56.542969-63.589844-.226562-.066406-.453125-.125-.6875-.167969l-74.257812-14.441406v-15.664062c2.589844-1.789063 5.117187-3.742188 7.582031-5.863282 13.324219-11.472656 21.828125-27.902344 23.9375-45.878906 9.984375-1.128906 17.769531-9.621094 17.769531-19.902344v-13.234375c6.488282-3.039062 10.988282-9.628906 10.988282-17.253906 0-9.085937-6.398438-16.707031-14.925782-18.59375v-4.757813c0-47.667968-38.78125-86.445312-86.445312-86.445312h-7.175782c-27.902343 0-54.234374 13.582031-70.445312 36.332031-2.402344 3.375-1.617188 8.058594 1.757812 10.460938 3.375 2.40625 8.054688 1.617187 10.457032-1.757813 5.914062-8.300781 13.460937-15.125 22.023437-20.15625v14.195313c0 4.144531 3.359375 7.5 7.5 7.5 4.144531 0 7.5-3.355469 7.5-7.5v-20.839844c5.71875-1.785156 11.683594-2.859375 17.765625-3.152344v41.90625c0 4.140625 3.355469 7.5 7.5 7.5 4.140625 0 7.5-3.359375 7.5-7.5v-41.855469c5.820313.351563 11.457032 1.40625 16.824219 3.078126v20.863281c0 4.144531 3.355469 7.5 7.5 7.5 4.140625 0 7.5-3.355469 7.5-7.5v-14.207031c21.070313 12.4375 35.238281 35.382812 35.238281 61.574218v4.3125h-150.066406v-4.3125c0-5.644531.660156-11.257812 1.960938-16.691406.960937-4.027344-1.523438-8.074219-5.550782-9.039062-4.035156-.96875-8.074218 1.523437-9.039062 5.550781-1.574219 6.574219-2.371094 13.363281-2.371094 20.179687v4.761719c-8.527344 1.886719-14.925781 9.507813-14.925781 18.59375 0 7.621094 4.503906 14.214844 10.988281 17.253906v13.234375c0 10.277344 7.785156 18.773438 17.769531 19.898438 2.109375 17.980468 10.617188 34.410156 23.9375 45.882812 2.464844 2.121094 4.992188 4.074219 7.582031 5.859375v15.667969l-74.257812 14.4375c-.234375.046875-.460938.101562-.6875.167969-38.046875 11.203125-56.542969 32.003906-56.542969 63.59375v87.242187c-23.179687 7.101563-40.082031 28.703125-40.082031 54.179688 0 31.234375 25.410156 56.648437 56.648438 56.648437h398.703124c31.234376 0 56.648438-25.414062 56.648438-56.648437 0-25.476563-16.902344-47.078125-40.085938-54.175782zm-135.054687-134.804687c27.996094 9.429687 40.5625 24.253906 40.5625 47.558594v14.824219h-40.5625zm-210.566406-148.4375c0-2.230469 1.8125-4.042969 4.039062-4.042969h171.839844c2.230469 0 4.042969 1.816406 4.042969 4.042969s-1.816406 4.039063-4.042969 4.039063h-171.839844c-2.226562 0-4.039062-1.808594-4.039062-4.039063zm28.253906 42.855469c-.089844-4.078125-3.417969-7.339844-7.5-7.339844h-4.738281c-2.769532 0-5.027344-2.253906-5.027344-5.027344v-11.445312h157.941406v11.445312c0 2.773438-2.253906 5.027344-5.027344 5.027344h-4.738281c-4.078125 0-7.410156 3.261719-7.496093 7.339844-.355469 16.503906-7.363282 31.828125-19.230469 42.046875-12.363281 10.644531-26.652344 16.140625-42.476563 16.335937-15.824218-.195312-30.113281-5.691406-42.476562-16.335937-11.867188-10.21875-18.878906-25.542969-19.230469-42.046875zm91.386719 67.457031v13.667969c0 16.363281-13.316406 29.679687-29.679688 29.679687-16.367187 0-29.683594-13.3125-29.683594-29.679687v-13.667969c9.261719 3.820313 19.152344 5.808594 29.597657 5.925781h.167969c10.445312-.117187 20.335937-2.101562 29.597656-5.925781zm-98.902344 27.539063 25.4375-4.949219c4.144531 20.378906 22.203125 35.757812 43.785156 35.757812 21.582032 0 39.636719-15.378906 43.785156-35.757812l25.433594 4.949219v42.347656c0 4.101562-3.339844 7.4375-7.441406 7.4375h-123.554688c-4.105468 0-7.441406-3.335938-7.441406-7.4375v-42.347656zm-36.386719 7.074218 21.390625-4.160156v39.433594c0 12.375 10.066406 22.4375 22.441406 22.4375h123.554688c12.371094 0 22.441406-10.0625 22.441406-22.4375v-39.433594l21.386719 4.160156v65.894532h-32.402344c-7.46875 0-13.542969 6.074218-13.542969 13.539062v56.410156h-165.269531zm-55.558593 51.070313c0-23.304688 12.5625-38.128907 40.558593-47.558594v62.382813h-40.558593zm0 29.824219h40.558593v54.949218h-38.996093c-.523438 0-1.046876.007813-1.5625.023438zm400.265624 153.246093h-398.703124c-22.964844 0-41.648438-18.683593-41.648438-41.648437s18.683594-41.648438 41.648438-41.648438h398.703124c22.964844 0 41.648438 18.683594 41.648438 41.648438s-18.683594 41.648437-41.648438 41.648437zm0 0">
+                                    </path>
+                                    <path
+                                        d="m455.351562 419.105469h-398.703124c-15.777344 0-28.613282 12.835937-28.613282 28.609375 0 15.777344 12.835938 28.609375 28.613282 28.609375h398.703124c15.777344 0 28.609376-12.832031 28.609376-28.609375.003906-15.773438-12.832032-28.609375-28.609376-28.609375zm-398.703124 42.222656c-6.742188 0-12.355469-4.929687-13.425782-11.375-.011718-.054687-.019531-.109375-.027344-.167969-.019531-.109375-.035156-.222656-.046874-.335937-.007813-.058594-.015626-.113281-.023438-.171875-.023438-.226563-.046875-.457032-.058594-.6875-.019531-.289063-.03125-.582032-.03125-.875 0-.292969.011719-.582032.03125-.871094.011719-.230469.035156-.460938.058594-.6875.007812-.058594.015625-.113281.023438-.171875.011718-.113281.027343-.226563.046874-.335937.007813-.058594.015626-.113282.027344-.171876 1.070313-6.441406 6.683594-11.371093 13.425782-11.371093 7.503906 0 13.609374 6.105469 13.609374 13.609375s-6.105468 13.609375-13.609374 13.613281zm100.4375 0h-75.277344c2.199218-4.050781 3.449218-8.6875 3.449218-13.613281 0-4.921875-1.25-9.558594-3.449218-13.609375h75.277344c-2.199219 4.050781-3.449219 8.6875-3.449219 13.609375s1.25 9.5625 3.449219 13.613281zm25.160156 0c-7.507813 0-13.609375-6.105469-13.609375-13.613281 0-7.503906 6.101562-13.609375 13.609375-13.609375 7.503906 0 13.609375 6.105469 13.609375 13.609375 0 7.507812-6.105469 13.613281-13.609375 13.613281zm122.347656 0h-97.1875c2.199219-4.050781 3.449219-8.6875 3.449219-13.613281 0-4.921875-1.25-9.558594-3.449219-13.609375h97.1875c-2.199219 4.050781-3.449219 8.6875-3.449219 13.609375s1.25 9.5625 3.449219 13.613281zm25.160156 0c-7.503906 0-13.609375-6.105469-13.609375-13.613281 0-7.503906 6.105469-13.609375 13.609375-13.609375 7.507813 0 13.609375 6.105469 13.609375 13.609375 0 7.507812-6.101562 13.613281-13.609375 13.613281zm25.160156 0c2.199219-4.050781 3.449219-8.6875 3.449219-13.613281 0-4.921875-1.25-9.558594-3.449219-13.609375h75.277344c-2.199218 4.050781-3.449218 8.6875-3.449218 13.609375 0 4.925781 1.25 9.5625 3.449218 13.613281zm100.4375 0c-7.503906 0-13.609374-6.109375-13.609374-13.613281s6.105468-13.609375 13.609374-13.609375c7.503907 0 13.613282 6.105469 13.613282 13.609375 0 7.507812-6.109375 13.613281-13.613282 13.613281zm0 0">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <!-- blog-blockt-two --> */}
+                    <div className="blog-blockt-two col-lg-6 col-md-6 col-sm-12">
+                        <div className="inner-box two wow fadeInUp" data-wow-delay="100ms">
+                            <h3 className="title">For Buyers! <br/>Start Buying</h3>
+                            <div className="text">With Enggpro.com, you can find the most trusted suppliers of Electrical,
+                                Mechanical, Thermal, Marine, Oil & Gas
+                                exploration and production, Piping, Instrumentation, Metal, Structural, Safety Equipment
+                                Sectors and EPC Service
+                                Providers.
+                            </div>
+                            <a href="#" className="read-more">Create RFQ
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_601_692)">
+                                        <path
+                                            d="M13.6109 0H5.05533C4.84037 0 4.66643 0.173943 4.66643 0.388901C4.66643 0.603859 4.84037 0.777802 5.05533 0.777802H12.6721L0.113697 13.3362C-0.0382246 13.4881 -0.0382246 13.7342 0.113697 13.8861C0.18964 13.962 0.289171 14 0.388666 14C0.488161 14 0.587656 13.962 0.663635 13.8861L13.222 1.3277V8.94447C13.222 9.15943 13.3959 9.33337 13.6109 9.33337C13.8259 9.33337 13.9998 9.15943 13.9998 8.94447V0.388901C13.9998 0.173943 13.8258 0 13.6109 0Z"
+                                            fill="white"></path>
+                                    </g>
+                                    <defs>
+                                        <clippath id="clip0_601_692">
+                                            <rect width="14" height="14" fill="white"></rect>
+                                        </clippath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <div className="hover-img">
+                                <svg id="fi_3396014" enable-background="new 0 0 512.002 512.002" height="110"
+                                    viewBox="0 0 512.002 512.002" width="110" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="m437.765 190.403-2.21-22 2.21-3.428-3.683-39.472-6.402-3.975h-43.25l-5.249 3.975-3.683 39.471 2.307 2.554-2.307 24-2.681 2.168-9.636 103.266 4.749 3.531h78l4.152-3.531-9.637-103.266z"
+                                                fill="#dbedff"></path>
+                                            <path
+                                                d="m403.151 193.696 2.68-2.168 2.307-24-2.307-2.554 3.683-39.471 5.249-3.975h-30.333l-5.249 3.975-3.683 39.471 2.307 2.554-2.307 24-2.681 2.168-9.636 103.266 4.749 3.531h30.333l-4.749-3.531z"
+                                                fill="#b5dcff"></path>
+                                            <path
+                                                d="m478.812 296.962h-149.938l-7.777 7.566v172.667h161l2.292-2.05v-172.606c0-3.08-2.497-5.577-5.577-5.577z"
+                                                fill="#8479c2"></path>
+                                            <path
+                                                d="m363.181 302.539c0-3.08 2.497-5.577 5.577-5.577h-39.884l-7.777 7.566v172.667h44.376l-2.292-2.05z"
+                                                fill="#6e60b8"></path>
+                                            <path
+                                                d="m437.082 96.78h-60.901c-2.881 0-5.216 2.335-5.216 5.216v18.291c0 2.881 2.335 5.216 5.216 5.216h60.901c2.881 0 5.216-2.335 5.216-5.216v-18.291c0-2.881-2.335-5.216-5.216-5.216z"
+                                                fill="#b5dcff"></path>
+                                            <path
+                                                d="m400.298 120.287v-18.291c0-2.881 2.335-5.216 5.216-5.216h-29.333c-2.881 0-5.216 2.335-5.216 5.216v18.291c0 2.881 2.335 5.216 5.216 5.216h29.333c-2.881 0-5.216-2.335-5.216-5.216z"
+                                                fill="#8bcaff"></path>
+                                            <path
+                                                d="m397.681 25.946c-2.002.451-4.017-.615-4.935-2.45-8.633-17.253-31.786-21.422-45.903-8.345-1.686 1.562-4.319 1.555-6.009-.002-11.13-10.252-28.404-10.26-39.542-.007-1.691 1.557-4.331 1.569-6.012 0-17.946-16.745-49.05-4.541-49.05 21.573 0 26.119 31.108 38.312 49.05 21.573 1.681-1.568 4.321-1.557 6.012 0 11.136 10.249 28.415 10.25 39.549-.014 1.688-1.556 4.314-1.561 6.003-.006 10.036 9.239 25.228 10.28 36.419 2.522 1.7-1.178 3.988-1.131 5.538.238 12.47 11.015 33.525 2.577 33.525-15.305 0-13.27-12.383-22.542-24.645-19.777z"
+                                                fill="#dbedff"></path>
+                                            <path
+                                                d="m388.802 38.279c-1.55-1.369-3.838-1.416-5.538-.238-11.191 7.758-26.383 6.717-36.419-2.522-1.688-1.555-4.315-1.55-6.003.006-11.134 10.264-28.414 10.263-39.549.014-1.691-1.557-4.331-1.569-6.012 0-15.079 14.068-39.45 7.696-46.847-10.197-1.405 3.398-2.204 7.207-2.204 11.375 0 26.119 31.108 38.312 49.05 21.573 1.681-1.568 4.321-1.557 6.012 0 11.136 10.249 28.415 10.25 39.549-.014 1.688-1.556 4.314-1.561 6.003-.006 10.036 9.239 25.228 10.28 36.419 2.522 1.7-1.178 3.988-1.131 5.538.238 12.47 11.015 33.525 2.577 33.525-15.305 0-4.281-1.293-8.141-3.45-11.32-6.49 9.443-20.705 12.15-30.074 3.874z"
+                                                fill="#b5dcff"></path>
+                                            <path d="m372.817 193.697h67.629l-2.681-28.723h-62.267z" fill="#f27182">
+                                            </path>
+                                            <path d="m375.498 164.974-2.681 28.723h30.333l2.681-28.723z" fill="#ed5469">
+                                            </path>
+                                            <path d="m361.84 446.384h89.583v30.065h-89.583z" fill="#00d2fc"></path>
+                                            <path d="m361.84 446.384h42.139v30.065h-42.139z" fill="#00c2fb"></path>
+                                            <path d="m361.84 391.47h89.583v30.065h-89.583z" fill="#00d2fc"></path>
+                                            <path d="m361.84 391.47h42.139v30.065h-42.139z" fill="#00c2fb"></path>
+                                            <path
+                                                d="m320.039 247.116-88.201 44.402c-2.056 1.036-3.354 3.141-3.354 5.444l-3.387 3.531v176.702h99.667l4.111-2.05v-222.585c-.001-4.537-4.782-7.484-8.836-5.444z"
+                                                fill="#ffc365"></path>
+                                            <path d="m361.84 420.231h89.583v27.457h-89.583z" fill="#62ddfc"></path>
+                                            <path d="m361.84 420.231h42.139v27.457h-42.139z" fill="#00d2fc"></path>
+                                            <path
+                                                d="m450.082 362.496h-86.901c-.466 0-.911-.09-1.341-.217v30.496h89.583v-30.496c-.431.127-.874.217-1.341.217z"
+                                                fill="#62ddfc"></path>
+                                            <path
+                                                d="m403.348 362.496h-40.878c-.219 0-.428-.09-.631-.217v30.496h42.139v-30.496c-.202.127-.41.217-.63.217z"
+                                                fill="#00d2fc"></path>
+                                            <path
+                                                d="m450.082 336.791h-86.901c-2.881 0-5.216 2.335-5.216 5.216v18.291c0 2.881 2.335 5.216 5.216 5.216h86.901c2.881 0 5.216-2.335 5.216-5.216v-18.291c0-2.881-2.335-5.216-5.216-5.216z"
+                                                fill="#dbedff"></path>
+                                            <path
+                                                d="m398.763 360.297v-18.291c0-2.881 2.335-5.216 5.216-5.216h-40.798c-2.881 0-5.216 2.335-5.216 5.216v18.291c0 2.881 2.335 5.216 5.216 5.216h40.798c-2.881 0-5.216-2.335-5.216-5.216z"
+                                                fill="#b5dcff"></path>
+                                            <path
+                                                d="m256.582 306.674c0-2.302 1.298-4.408 3.354-5.444l68.938-34.705v-13.965c0-4.538-4.781-7.484-8.835-5.444l-88.201 44.402c-2.056 1.036-3.354 3.141-3.354 5.444v178.183h28.097v-168.471z"
+                                                fill="#ffa90f"></path>
+                                            <path
+                                                d="m219.649 247.116-88.201 44.402c-2.056 1.036-3.354 3.141-3.354 5.444l-4.331 3.531v179.368h97l7.721-4.716v-222.585c0-4.537-4.781-7.484-8.835-5.444z"
+                                                fill="#ffc365"></path>
+                                            <path
+                                                d="m156.192 306.674c0-2.302 1.298-4.408 3.354-5.444l68.938-34.705v-13.965c0-4.538-4.781-7.484-8.835-5.444l-88.201 44.402c-2.056 1.036-3.354 3.141-3.354 5.444v178.183h28.097v-168.471z"
+                                                fill="#ffa90f"></path>
+                                            <path
+                                                d="m119.259 247.116-88.201 44.402c-2.056 1.036-3.354 3.141-3.354 5.444v178.183h100.39v-222.585c0-4.538-4.781-7.484-8.835-5.444z"
+                                                fill="#ffc365"></path>
+                                            <path
+                                                d="m55.802 306.674c0-2.302 1.298-4.408 3.354-5.444l68.938-34.705v-13.965c0-4.538-4.781-7.484-8.835-5.444l-88.201 44.402c-2.056 1.036-3.354 3.141-3.354 5.444v178.183h28.097v-168.471z"
+                                                fill="#ffa90f"></path>
+                                            <path
+                                                d="m497.299 474.145h-482.505c-4.003 0-7.249 3.245-7.249 7.249v15.815c0 4.003 3.245 7.249 7.249 7.249h482.505c4.003 0 7.249-3.245 7.249-7.249v-15.815c0-4.004-3.245-7.249-7.249-7.249z"
+                                                fill="#dbedff"></path>
+                                            <path
+                                                d="m497.299 489.301h-482.505c-4.003 0-7.249-3.245-7.249-7.249v15.156c0 4.003 3.245 7.249 7.249 7.249h482.505c4.003 0 7.249-3.245 7.249-7.249v-15.156c0 4.004-3.245 7.249-7.249 7.249z"
+                                                fill="#b5dcff"></path>
+                                            <g fill="#00d2fc">
+                                                <path
+                                                    d="m295.584 319.319h-33.81c-3.42 0-6.193 2.772-6.193 6.193v37.81c0 3.42 2.773 6.193 6.193 6.193h33.81c3.42 0 6.193-2.772 6.193-6.193v-37.81c0-3.421-2.773-6.193-6.193-6.193z">
+                                                </path>
+                                                <path
+                                                    d="m195.194 319.319h-33.81c-3.42 0-6.193 2.772-6.193 6.193v37.81c0 3.42 2.773 6.193 6.193 6.193h33.81c3.42 0 6.193-2.772 6.193-6.193v-37.81c0-3.421-2.773-6.193-6.193-6.193z">
+                                                </path>
+                                                <path
+                                                    d="m94.804 319.319h-33.81c-3.42 0-6.193 2.772-6.193 6.193v37.81c0 3.42 2.773 6.193 6.193 6.193h33.81c3.42 0 6.193-2.772 6.193-6.193v-37.81c0-3.421-2.773-6.193-6.193-6.193z">
+                                                </path>
+                                            </g>
+                                            <path
+                                                d="m278.679 363.321v-37.81c0-3.42 2.773-6.193 6.193-6.193h-23.098c-3.42 0-6.193 2.772-6.193 6.193v37.81c0 3.42 2.773 6.193 6.193 6.193h23.098c-3.42 0-6.193-2.773-6.193-6.193z"
+                                                fill="#00c2fb"></path>
+                                            <path
+                                                d="m178.289 363.321v-37.81c0-3.42 2.773-6.193 6.193-6.193h-23.098c-3.42 0-6.193 2.772-6.193 6.193v37.81c0 3.42 2.773 6.193 6.193 6.193h23.098c-3.42 0-6.193-2.773-6.193-6.193z"
+                                                fill="#00c2fb"></path>
+                                            <path
+                                                d="m77.899 363.321v-37.81c0-3.42 2.773-6.193 6.193-6.193h-23.098c-3.42 0-6.193 2.772-6.193 6.193v37.81c0 3.42 2.773 6.193 6.193 6.193h23.098c-3.42 0-6.193-2.773-6.193-6.193z"
+                                                fill="#00c2fb"></path>
+                                        </g>
+                                        <g>
+                                            <path
+                                                d="m60.949 377.056h33.81c7.55 0 13.692-6.143 13.692-13.693v-37.81c0-7.55-6.143-13.692-13.692-13.692h-33.81c-7.551 0-13.693 6.143-13.693 13.692v37.81c0 7.55 6.142 13.693 13.693 13.693zm1.307-50.195h31.195v35.195h-31.195z">
+                                            </path>
+                                            <path
+                                                d="m161.339 377.056h33.81c7.55 0 13.692-6.143 13.692-13.693v-37.81c0-7.55-6.143-13.692-13.692-13.692h-33.81c-7.551 0-13.693 6.143-13.693 13.692v37.81c0 7.55 6.142 13.693 13.693 13.693zm1.307-50.195h31.195v35.195h-31.195z">
+                                            </path>
+                                            <path
+                                                d="m261.729 377.056h33.81c7.551 0 13.693-6.143 13.693-13.693v-37.81c0-7.55-6.143-13.692-13.693-13.692h-33.81c-7.55 0-13.692 6.143-13.692 13.692v37.81c-.001 7.55 6.142 13.693 13.692 13.693zm1.307-50.195h31.195v35.195h-31.195z">
+                                            </path>
+                                            <path
+                                                d="m398.365 18.243c-5.36-9.293-14.432-15.669-25.2-17.627-10.595-1.926-21.147.722-29.377 7.281-13.239-10.464-32.292-10.467-45.537-.008-10.461-8.343-24.909-10.237-37.575-4.733-13.564 5.896-21.991 18.771-21.991 33.602 0 14.83 8.426 27.705 21.988 33.6 12.669 5.506 27.116 3.612 37.578-4.731 13.25 10.463 32.313 10.456 45.553-.02 11.935 9.418 28.824 10.484 41.846 2.586 17.719 13.034 44.132.802 44.132-22.426-.001-17.031-15.111-29.735-31.417-27.524zm-4.643 37.208c-4.118-3.638-10.194-3.957-14.775-.781-8.274 5.735-19.657 4.946-27.066-1.876-4.533-4.173-11.635-4.169-16.166.009-8.236 7.591-21.145 7.596-29.387.011-4.566-4.204-11.687-4.188-16.208.033-7.522 7.019-17.052 6.543-23.467 3.754-8.12-3.529-12.968-10.948-12.968-19.843 0-8.896 4.849-16.315 12.971-19.845 7.574-3.292 16.728-2.529 23.463 3.756 4.523 4.221 11.643 4.236 16.209.034 8.238-7.585 21.143-7.583 29.381.005 4.549 4.19 11.659 4.185 16.187-.012 4.991-4.622 11.762-6.562 18.587-5.322 6.815 1.239 12.469 5.438 15.513 11.52 2.488 4.977 7.953 7.613 13.29 6.411h.001c7.568-1.709 15.496 3.97 15.496 12.462-.002 11.365-13.385 16.467-21.061 9.684z">
+                                            </path>
+                                            <path
+                                                d="m497.254 467.688h-5.41v-165.106c0-7.211-5.866-13.077-13.077-13.077h-21.897l-2.974-31.867c-.386-4.124-4.044-7.157-8.165-6.771-4.124.385-7.155 4.041-6.771 8.165l2.844 30.473h-70.436l8.237-88.265h53.961l2.127 22.792c.385 4.124 4.03 7.153 8.165 6.771 4.124-.385 7.155-4.041 6.771-8.165-1.007-10.794-7.479-80.152-8.462-90.683 4.461-1.977 7.586-6.44 7.586-11.625v-18.291c0-7.012-5.705-12.716-12.717-12.716h-60.9c-7.012 0-12.717 5.704-12.717 12.716v18.291c0 5.186 3.125 9.648 7.586 11.625-.641 6.87-14.062 150.685-14.702 157.55h-19.975v-36.902c0-10.131-10.672-16.689-19.707-12.143l-80.683 40.617v-28.475c0-10.131-10.672-16.689-19.707-12.143l-80.683 40.617v-28.474c0-10.131-10.672-16.689-19.707-12.143l-88.201 44.403c-4.614 2.324-7.48 6.976-7.48 12.143v170.683h-5.41c-8.134 0-14.75 6.616-14.75 14.748v14.816c0 8.132 6.616 14.748 14.749 14.748h223.752c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-223.501v-14.313h482.002v14.313h-223.501c-4.143 0-7.5 3.358-7.5 7.5s3.357 7.5 7.5 7.5h223.753c8.132 0 14.748-6.616 14.748-14.749v-14.816c0-8.131-6.616-14.747-14.748-14.747zm-116.249-281.449 1.28-13.722h48.601l1.281 13.722zm2.68-28.722 2.284-24.472h41.234l2.284 24.472zm-5.266-53.194h56.334v13.722h-.717-54.9-.717zm-257.87 363.365h-85.39v-169.818l85.39-42.987zm100.389 0h-85.39v-169.818l85.39-42.987zm100.39 0h-85.39v-169.817l85.39-42.987zm122.549 0h-74.582v-12.457h74.582zm0-27.457h-74.582v-12.457h74.582zm0-27.457h-74.582v-12.457h74.582zm0-27.457h-74.582v-12.261h74.582zm3.876-27.261h-82.334v-13.722h82.334zm29.091 109.632h-17.967c0-10.892 0-89.051 0-98.227 2.386-2.313 3.876-5.544 3.876-9.121v-18.29c0-7.012-5.705-12.716-12.717-12.716h-86.9c-7.012 0-12.717 5.704-12.717 12.716v18.291c0 3.577 1.49 6.808 3.876 9.121v98.227h-17.967v-163.184h140.516z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  );
+        </section>
+        {/* <!-- blog-section-two --> */}
+  </>
+ )
 };
 
 export default Explore;
