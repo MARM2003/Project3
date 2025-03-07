@@ -22,7 +22,7 @@ const Header = () => {
     return (
         <>
             {/* Navbar */}
-            <nav className="navbar  navbar-expand-lg" style={{ backgroundColor: "rgb(10, 10, 58)" }}>
+            <nav className="navbar  navbar-expand-lg">
                 <div className="container d-flex justify-content-between align-items-center">
                     <a className="navbar-brand" href="/">
                         <img src={logo} alt="Company Logo" style={{ width: "150px", height: "auto", maxHeight: "60px" }} />
