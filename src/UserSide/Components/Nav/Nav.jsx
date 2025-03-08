@@ -22,8 +22,8 @@ const Header = () => {
                         <div className="nav-out-bar">
                             <nav className="nav main-menu">
                                 <ul className="navigation" id="navbar">
-                                    <li className="current-dropdown current"><span>Explore <i
-                                                className="fa-solid fa-angle-down"></i></span>
+                                    <li className="current-dropdown current"><span>Explore <span><i className="fa-solid fa-angle-down"></i></span></span>
+
                                         <ul className="dropdown">
                                             <li><a href="#">Mechanical</a></li>
                                             <li><a href="#">Piping</a></li>
@@ -40,15 +40,13 @@ const Header = () => {
                                             <li><a href="#">Explore All Vendors</a></li>
                                         </ul>
                                     </li>
-                                    <li className="current-dropdown current"><span>For Buyers <i
-                                                className="fa-solid fa-angle-down"></i></span>
+                                    <li className="current-dropdown current"><span>For Buyers <span><i className="fa-solid fa-angle-down"></i></span></span>
                                         <ul className="dropdown">
                                             <li><a href="#">Register As A Buyer</a></li>
                                             <li><a href="#">Float RFQ</a></li>
                                         </ul>
                                     </li>
-                                    <li className="current-dropdown current"><span>For Vendors <i
-                                                className="fa-solid fa-angle-down"></i></span>
+                                    <li className="current-dropdown current"><span>For Vendors <span><i className="fa-solid fa-angle-down"></i></span></span>
                                         <ul className="dropdown">
                                             <li><a href="#">Register As A Vendor</a></li>
                                             <li><a href="#">Business Leads</a></li>
