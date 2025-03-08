@@ -3,6 +3,29 @@ import logo from "../images/logo.png";
 
 const Header = () => {
     
+    const [showMainCanvas, setShowMainCanvas] = useState(false);
+    const [showSubCanvas, setShowSubCanvas] = useState(false);
+    const [activeDropdown, setActiveDropdown] = useState(null);
+
+    const handleShowMainCanvas = () => setShowMainCanvas(true);
+    const handleShowSubCanvas = (dropdown) => {
+        setActiveDropdown(dropdown);
+        setShowMainCanvas(false);
+        setShowSubCanvas(true);
+    };
+
+    const handleBackToMain = () => {
+        setShowSubCanvas(false);
+        setShowMainCanvas(true);
+    };
+
+    const handleCloseMainCanvas = () => {
+        setShowMainCanvas(false);
+    };
+
+    const handleCloseSubCanvas = () => {
+        setShowSubCanvas(false);
+    };
 
     return (
         <>
@@ -84,7 +107,7 @@ const Header = () => {
                                 <a href="#" className="header-btn-two">Add Listing</a>
                             </div>
                             <div className="mobile-navigation">
-                                <a href="#nav-mobile" title="">
+                                <a href="#nav-mobile" title="" onClick={handleShowMainCanvas}>
                                     {/* <!-- <i className="fa fa-bars"></i> --> */}
                                     <svg width="22" height="11" viewBox="0 0 22 11" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +124,7 @@ const Header = () => {
             </div>
 
             {/* <!-- Header Search --> */}
-            <div className="search-popup">
+            {/* <div className="search-popup">
                 <span className="search-back-drop"></span>
                 <button className="close-search"><span className="fa fa-times"></span></button>
 
@@ -113,12 +136,99 @@ const Header = () => {
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> */}
             {/* <!-- End Header Search --> */}
 
             <div id="nav-mobile"></div>
         </header>
         {/* <!-- End header-section --> */}
+
+
+        {/* Main Offcanvas */}
+        <div className={`offcanvas offcanvas-start ${showMainCanvas ? "show" : ""}`} tabIndex="-1" id="offcanvasExample">
+                <div className="offcanvas-body">
+                    <div className="offcanvas-header">
+                        <h5 className="offcanvas-title">Menu</h5>
+                        <button type="button" className="btn-close" onClick={handleCloseMainCanvas}></button>
+                    </div>
+                    <ul className="list-unstyled">
+                        <li>
+                            <a className="nav-link bg-primary bg-opacity-10 rounded-3 p-3 d-flex justify-content-between align-items-center text-dark fw-semibold"
+                                onClick={() => handleShowSubCanvas("explore")}>
+                                Explore
+                                <span className="text-dark">&gt;</span>
+                            </a>
+                        </li>
+                        <li className="mt-2">
+                            <a className="nav-link bg-primary bg-opacity-10 rounded-3 p-3 d-flex justify-content-between align-items-center text-dark fw-semibold"
+                                onClick={() => handleShowSubCanvas("buyers")}>
+                                For Buyers
+                                <span className="text-dark">&gt;</span>
+                            </a>
+                        </li>
+                        <li className="mt-2">
+                            <a className="nav-link bg-primary bg-opacity-10 rounded-3 p-3 d-flex justify-content-between align-items-center text-dark fw-semibold"
+                                onClick={() => handleShowSubCanvas("vendors")}>
+                                For Vendors
+                                <span className="text-dark">&gt;</span>
+                            </a>
+                        </li>
+                        <li className="mt-3">
+                            <a className="nav-link text-dark fw-semibold" href="#">Business Booster</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            {/* Sub Offcanvas for Dropdowns */}
+            <div className={`offcanvas offcanvas-start ${showSubCanvas ? "show" : ""}`} tabIndex="-1">
+                <div className="offcanvas-header">
+                <span className=" me-2" onClick={handleBackToMain}>
+                <i class="fa-solid fa-chevron-left"></i>
+                </span>
+                    <h5 className="offcanvas-title">
+                        {activeDropdown === "explore" ? "Explore" : activeDropdown === "buyers" ? "For Buyers" : "For Vendors"}
+                    </h5>
+
+                    <button type="button" className="btn-close" onClick={handleCloseSubCanvas}></button>
+                </div>
+                {/* Back Button */}
+               
+                <div className="offcanvas-body">
+                    <ul className="list-unstyled custom-can ms-3">
+                        {activeDropdown === "explore" && (
+                            <>
+                                <li className=""><a className="nav-link" href="#">Mechanical</a></li>
+                                <li><a className="nav-link" href="#">Piping</a></li>
+                                <li><a className="nav-link" href="#">Electrical</a></li>
+                                <li><a className="nav-link" href="#">Instrumentation</a></li>
+                                <li><a className="nav-link" href="#">Thermal</a></li>
+                                <li><a className="nav-link" href="#">Metal</a></li>
+                                <li><a className="nav-link" href="#">Structural</a></li>
+                                <li><a className="nav-link" href="#">Oil & Gas Exploration</a></li>
+                                <li><a className="nav-link" href="#">Oil & Gas Production</a></li>
+                                <li><a className="nav-link" href="#">Marine</a></li>
+                                <li><a className="nav-link" href="#">Safety</a></li>
+                                <li><a className="nav-link" href="#">Engineering Services</a></li>
+                                <li><a className="nav-link" href="#">Explore All Vendors</a></li>
+                            </>
+                        )}
+                        {activeDropdown === "buyers" && (
+                            <>
+                                <li><a className="nav-link" href="#">Register as Buyer</a></li>
+                                <li><a className="nav-link" href="#">Float RFQ</a></li>
+                            </>
+                        )}
+                        {activeDropdown === "vendors" && (
+                            <>
+                                <li><a className="nav-link" href="#">Register as Vendor</a></li>
+                                <li><a className="nav-link" href="#">Business Leads</a></li>
+                            </>
+                        )}
+                    </ul>
+                </div>
+            </div>
 
         </>
     );
